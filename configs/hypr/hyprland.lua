@@ -17,6 +17,7 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal    = "kitty"
+local browser	  = "google-chrome-stable"
 local fileManager = "thunar"
 local menu        = "rofi -show drun"
 local run	  = "rofi -show run"
@@ -231,6 +232,7 @@ local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + SHIFT + ESCAPE", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(run))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
