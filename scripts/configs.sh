@@ -40,11 +40,23 @@ wallpaper {
 }
 EOF
 
-if [[ "$SHELL" != "$(command -v zsh)" ]]; then
-  echo
-  echo "To make Zsh your login shell, run:"
-  echo "  chsh -s \"$(command -v zsh)\""
-fi
+configure_zsh() {
+    local zsh_path
+
+    zsh_path="$(command -v zsh)"
+
+    if [[ -z "$zsh_path" ]]; then
+        echo "ERROR: Zsh is not installed."
+        return 1
+    fi
+
+    mkdir -p "$HOME/.config/zsh"
+    cp "$PROJECT_DIR/configs/zsh/.zshrc" "$HOME/.zshrc"
+
+    if [[ "$SHELL" != "$zsh_path" ]]; then
+        chsh -s "$zsh_path"
+    fi
+}
 
 if [[ -d "$BACKUP_DIR" ]]; then
   echo
