@@ -1,0 +1,26 @@
+* {
+    font-family: "Mononoki Nerd Font", "Noto Sans", sans-serif;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(15, 19, 25, 0.94);
+    color: #d8e3ea;
+    border-bottom: 2px solid #28c7e8;
+}
+
+#workspaces button {
+    color: #8c9aa5;
+    padding: 0 8px;
+    border-radius: 0;
+}
+
+#workspaces button.active {
+    color: #28c7e8;
+    border-bottom: 2px solid #28c7e8;
+}
+
+#clock, #pulseaudio, #network, #bluetooth, #battery, #tray, #window {
+    padding: 0 9px;
+}

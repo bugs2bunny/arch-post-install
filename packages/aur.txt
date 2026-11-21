@@ -1,0 +1,5 @@
+# AUR packages
+google-chrome
+hyprshot
+ttf-mononoki-nerd
+waybar-git

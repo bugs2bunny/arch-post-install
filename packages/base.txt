@@ -1,0 +1,70 @@
+# Base utilities
+brightnessctl
+playerctl
+ranger
+tree
+base-devel
+git
+curl
+wget
+unzip
+zip
+man-db
+man-pages
+less
+openssh
+zsh
+vim
+fastfetch
+btop
+
+# Network and desktop integration
+network-manager-applet
+bluez
+bluez-utils
+blueman
+cups
+cups-pdf
+system-config-printer
+avahi
+nss-mdns
+
+# Hyprland / Wayland
+hyprland
+xdg-desktop-portal
+xdg-desktop-portal-hyprland
+qt5-wayland
+qt6-wayland
+polkit-gnome
+rofi-wayland
+kitty
+thunar
+thunar-archive-plugin
+file-roller
+gvfs
+gvfs-mtp
+sddm
+hyprpaper
+hyprlock
+hypridle
+grim
+slurp
+wl-clipboard
+cliphist
+swappy
+pavucontrol
+
+# Audio
+pipewire
+pipewire-alsa
+pipewire-pulse
+wireplumber
+
+# Fonts
+ttf-dejavu
+noto-fonts
+noto-fonts-emoji
+
+# GTK / themes utilities
+lxappearance
+papirus-icon-theme

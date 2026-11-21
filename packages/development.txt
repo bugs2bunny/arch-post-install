@@ -1,0 +1,14 @@
+# Development tools
+gcc
+make
+cmake
+ninja
+python
+python-pip
+python-virtualenv
+nodejs
+npm
+go
+gdb
+strace
+shellcheck
