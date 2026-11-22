@@ -40,10 +40,16 @@ rofi-wayland
 kitty
 thunar
 thunar-archive-plugin
+tumbler
+ffmpegthumbnailer
+poppler-glib
 file-roller
 gvfs
 gvfs-mtp
 sddm
+qt6-svg
+qt6-virtualkeyboard
+qt6-multimedia-ffmpeg
 hyprpaper
 hyprlock
 hypridle
