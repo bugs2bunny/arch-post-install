@@ -58,7 +58,19 @@ configure_zsh() {
     fi
 }
 
+configure_rofi() {
+    local source="$PROJECT_DIR/configs/rofi"
+    local destination="$HOME/.local/share/rofi"
+
+    mkdir -p "$destination"
+    cp -a "$source/." "$destination/"
+}
+
+configure_zsh
+configure_rofi
+
 if [[ -d "$BACKUP_DIR" ]]; then
   echo
   echo "Previous configurations backed up to: $BACKUP_DIR"
 fi
+
