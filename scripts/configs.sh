@@ -23,7 +23,6 @@ mkdir -p "$HOME/.config"
 backup_and_copy "$PROJECT_DIR/configs/hypr/hyprland.lua" "$HOME/.config/hypr/hyprland.lua"
 backup_and_copy "$PROJECT_DIR/configs/waybar/config" "$HOME/.config/waybar/config"
 backup_and_copy "$PROJECT_DIR/configs/waybar/style.css" "$HOME/.config/waybar/style.css"
-backup_and_copy "$PROJECT_DIR/configs/rofi/config.rasi" "$HOME/.config/rofi/config.rasi"
 backup_and_copy "$PROJECT_DIR/configs/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
 backup_and_copy "$PROJECT_DIR/configs/zsh/.zshrc" "$HOME/.zshrc"
 
