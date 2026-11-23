@@ -1,0 +1,31 @@
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    font: "Mononoki Nerd Font 11";
+    display-drun: "Applications";
+    drun-display-format: "{name}";
+}
+
+* {
+    background: #101820;
+    foreground: #d8e3ea;
+    selected: #28c7e8;
+    active: #28c7e8;
+    urgent: #e85b5b;
+}
+
+window {
+    width: 42%;
+    border: 2px;
+    border-color: #28c7e8;
+    border-radius: 8px;
+    background-color: #101820;
+}
+
+mainbox { padding: 10px; }
+inputbar { padding: 8px; }
+listview { lines: 8; }
+element { padding: 7px; }
+element selected { background-color: #203744; }
+
+@theme "/home/bugs/.local/share/rofi/themes/rounded-blue-dark.rasi"

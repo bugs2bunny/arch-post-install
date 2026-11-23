@@ -86,6 +86,12 @@ if ((${#aur_packages[@]})); then
   yay -S --needed --noconfirm "${aur_packages[@]}"
 fi
 
+echo "=== Installing SDDM theme ==="
+sudo git clone -b master --depth 1 https://github.com/keyitdev/sddm-astronaut-theme.git /usr/share/sddm/themes/sddm-astronaut-theme
+sudo cp -r /usr/share/sddm/themes/sddm-astronaut-theme/Fonts/* /usr/share/fonts/
+echo "[Theme]\nCurrent=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
+echo "[General]\nInputMethod=qtvirtualkeyboard" | sudo tee /etc/sddm.conf.d/virtualkbd.conf
+
 echo
 echo "=== Applying user configuration ==="
 "$SCRIPT_DIR/scripts/configs.sh" "$SCRIPT_DIR"
