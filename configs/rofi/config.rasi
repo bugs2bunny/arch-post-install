@@ -28,4 +28,4 @@ listview { lines: 8; }
 element { padding: 7px; }
 element selected { background-color: #203744; }
 
-@theme "/home/bugs/.local/share/rofi/themes/rounded-blue-dark.rasi"
+@theme "rounded-blue-dark.rasi"

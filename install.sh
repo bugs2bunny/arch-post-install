@@ -87,10 +87,28 @@ if ((${#aur_packages[@]})); then
 fi
 
 echo "=== Installing SDDM theme ==="
-sudo git clone -b master --depth 1 https://github.com/keyitdev/sddm-astronaut-theme.git /usr/share/sddm/themes/sddm-astronaut-theme
+
+SDDM_THEME_DIR="/usr/share/sddm/themes/sddm-astronaut-theme"
+VIRTUAL_KBD_DIR="/etc/sddm.conf.d"
+
+if [[ ! -d "$SDDM_THEME_DIR" ]]; then
+	echo "Cloning SDDM Astronaut theme..."
+	sudo git clone -b master --depth 1 https://github.com/keyitdev/sddm-astronaut-theme.git "$SDDM_THEME_DIR"
+else
+	echo "SDDM Astronaut theme already exists.Skipping clone."
+fi
+
 sudo cp -r /usr/share/sddm/themes/sddm-astronaut-theme/Fonts/* /usr/share/fonts/
-echo "[Theme]\nCurrent=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
-echo "[General]\nInputMethod=qtvirtualkeyboard" | sudo tee /etc/sddm.conf.d/virtualkbd.conf
+
+echo "[Theme]
+Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
+
+if [[ ! -d "$VIRTUAL_KBD_DIR" ]]; then
+	sudo mkdir /etc/sddm.conf.d
+fi
+
+echo "[General]
+InputMethod=qtvirtualkeyboard" | sudo tee /etc/sddm.conf.d/virtualkbd.conf
 
 echo
 echo "=== Applying user configuration ==="

@@ -24,7 +24,7 @@ backup_and_copy "$PROJECT_DIR/configs/hypr/hyprland.lua" "$HOME/.config/hypr/hyp
 backup_and_copy "$PROJECT_DIR/configs/waybar/config" "$HOME/.config/waybar/config"
 backup_and_copy "$PROJECT_DIR/configs/waybar/style.css" "$HOME/.config/waybar/style.css"
 backup_and_copy "$PROJECT_DIR/configs/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
-backup_and_copy "$PROJECT_DIR/wallpaper.jgp" "$HOME/Pictures/wallpaper.jpg"
+backup_and_copy "$PROJECT_DIR/wallpaper.jpg" "$HOME/Pictures/wallpaper.jpg"
 
 if [[ -f "$HOME/.config/hypr/hyprpaper.conf" ]]; then
     cp -n "$HOME/.config/hypr/hyprpaper.conf" \
@@ -60,12 +60,13 @@ configure_zsh() {
 configure_rofi() {
     local theme_source="$PROJECT_DIR/configs/rofi/themes"
     local theme_destination="$HOME/.local/share/rofi/themes"
-    local config_source="$PROJECT_DIR/configs/rofi/config.rasi"
-    local config_destination="$HOME/.config/rofi/config.rasi"
+    local config_source="$PROJECT_DIR/configs/rofi/"
+    local config_destination="$HOME/.config/rofi/"
 
     mkdir -p "$theme_destination"
+    mkdir -p "$config_destination"
     cp -a "$theme_source/." "$theme_destination/"
-    cp -a "$config_source" "$config_desination
+    cp -a "$config_source/config.rasi" "$config_destination/config.rasi"
 }
 
 configure_zsh
