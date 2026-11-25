@@ -1,4 +1,7 @@
 # Base utilities
+zsh-autosuggestions
+zsh-syntax-highlighting
+fzf
 brightnessctl
 playerctl
 ranger
@@ -65,6 +68,7 @@ pipewire
 pipewire-alsa
 pipewire-pulse
 wireplumber
+alsa-utils
 
 # Fonts
 ttf-dejavu
